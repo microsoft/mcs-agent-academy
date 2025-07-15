@@ -15,6 +15,7 @@ Let’s launch your agent into action.
 ## 🔎 Objectives
 
 📖 This lesson will cover:
+- ![📺 What are channels?](#-what-are-channels)
 
 ## 📺 What are channels?
 
