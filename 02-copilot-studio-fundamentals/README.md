@@ -1,4 +1,4 @@
-# 🚨 Mission 02: Copilot Studio Fundamentals
+b# 🚨 Mission 02: Copilot Studio Fundamentals
 
 ## 🕵️‍♂️ CODENAME: `OPERATION CORE PROTOCOL`
 
@@ -190,11 +190,11 @@ Under the hood, the orchestrator uses a **generative planning** approach: it dec
 
 ```mermaid
 flowchart TD
-    A["👤 User<br/>Show me my PTO balance"] --> B["🧠 AI (Topics)<br/>Matches 'Check PTO Balance' topic"]
-    B --> C["📋 AI (Instructions)<br/>Uses friendly, concise tone"]
-    C --> D["📚 Agent (Knowledge)<br/>Queries HR SharePoint list"]
-    D --> E["⚡ Agent (Actions)<br/>Retrieves balance value"]
-    E --> F["💬 Response<br/>Your current PTO balance is 12 days"]
+    A["<b>👤 User</b><br/>Show me my PTO balance"] --> B["<b>🧠 AI (Topics)</b><br/>Matches 'Check PTO Balance' topic"]
+    B --> C["<b>📋 AI (Instructions)</b><br/>Uses friendly, concise tone"]
+    C --> D["<b>📚 Agent (Knowledge)</b><br/>Queries HR SharePoint list"]
+    D --> E["<b>⚡ Agent (Actions)</b><br/>Retrieves balance value"]
+    E --> F["<b>💬 Response</b><br/>Your current PTO balance is 12 days"]
 ```
 
 ---
