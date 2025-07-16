@@ -190,11 +190,11 @@ Under the hood, the orchestrator uses a **generative planning** approach: it dec
 
 ```mermaid
 flowchart TD
-    A["<b>👤 User</b><br/>Show me my PTO balance"] --> B["<b>🧠 AI (Topics)</b><br/>Matches 'Check PTO Balance' topic"]
-    B --> C["<b>📋 AI (Instructions)</b><br/>Uses friendly, concise tone"]
-    C --> D["<b>📚 Agent (Knowledge)</b><br/>Queries HR SharePoint list"]
-    D --> E["<b>⚡ Agent (Actions)</b><br/>Retrieves balance value"]
-    E --> F["<b>💬 Response</b><br/>Your current PTO balance is 12 days"]
+    A["<b>👤 User</b><br/><br/>Show me my PTO balance"] --> B["<b>🧠 AI (Topics)</b><br/><br/>Matches 'Check PTO Balance' topic"]
+    B --> C["<b>📋 AI (Instructions)</b><br/><br/>Uses friendly, concise tone"]
+    C --> D["<b>📚 Agent (Knowledge)</b><br/><br/>Queries HR SharePoint list"]
+    D --> E["<b>⚡ Agent (Actions)</b><br/><br/>Retrieves balance value"]
+    E --> F["<b>💬 Response</b><br/><br/>Your current PTO balance is 12 days"]
 ```
 
 ---
