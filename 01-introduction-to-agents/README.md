@@ -1,13 +1,15 @@
 # 🚨 Mission 01: Introduction to Agents
 
-### 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
+## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
 
 > **⏱️ Operation Time Window:** `~30 minutes – intel only, no fieldwork required`  
 
-## 🎯 Mission Brief:
+## 🎯 Mission Brief
+
 Welcome, Recruit. Before we dive into building agents, you need a firm grasp of the AI concepts that power them. This mission will equip you with foundational knowledge of conversational AI, large language models (LLMs), retrieval-augmented generation (RAG), and the types of agents you can create in Copilot Studio.
 
 ## 🔎 Objectives
+
 In this mission, you’ll learn:
 
 1. What conversational AI is and why it matters  
@@ -43,7 +45,8 @@ At the core of most conversational AI systems are **Large Language Models** – 
 1. **Prompting:** You interact with an LLM by sending it a prompt. The better your prompt, the more focused and relevant the response.  
 1. **Zero-shot vs. Fine-tuning:** Zero-shot means using an LLM as-is (just raw weights). Fine-tuning means adjusting the model on domain-specific data so it answers more accurately for your needs.
 
-> **Pro Tip:** A common analogy is that an LLM is like a “super-smart autocomplete.” It doesn’t truly understand meaning like a human brain, but it’s extremely good at predicting the next best word (or phrase) in a sequence.
+> [!TIP]
+> A common analogy is that an LLM is like a “super-smart autocomplete.” It doesn’t truly understand meaning like a human brain, but it’s extremely good at predicting the next best word (or phrase) in a sequence.
 
 ---
 
@@ -82,6 +85,7 @@ In the context of Copilot Studio, the term **agent** can refer to multiple flavo
       - An agent that generates a travel itinerary, books flights, and emails confirmations.  
       - A “Meeting Summarizer” agent that joins a Teams call, transcribes it in real time, and writes an executive summary to OneNote.  
 
+> [!NOTE]
 > **Key Difference:** Conversational agents wait for user input and stick to dialogue. Autonomous agents proactively plan and execute a sequence of steps using broader tool access.
 
 ---
@@ -114,6 +118,7 @@ You’ve now completed your introduction to agents and foundational AI concepts.
 1. **Conversational vs. Autonomous**  
    - **Conversational:** Focus on dialogue flow and preserving context (e.g., “Session Memory”).  
    - **Autonomous:** Add “Action Blocks” that let the agent call out to external tools or services.
+
 ---
 Next up, you'll explore the [fundamentals of Copilot Studio](/02-copilot-studio-fundamentals/README.md)!
 
@@ -122,9 +127,8 @@ Stay sharp, Recruit - your AI journey is just beginning!
 ## Additional Resources
 
 - **Copilot Studio Documentation Home**  
-  https://learn.microsoft.com/microsoft-copilot-studio/  
+  <https://learn.microsoft.com/microsoft-copilot-studio/>  
 
 ---
-
 
 ![mcs-agent-academy-recruit-01](https://m365-visitor-stats.azurewebsites.net/?resource=https://github.com/microsoft/mcs-agent-academy-recruit/tree/main/01-introduction-to-agents)
