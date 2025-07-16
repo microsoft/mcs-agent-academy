@@ -175,6 +175,7 @@ When you assemble **Knowledge**, **Tools**, **Topics**, and **Instructions**, Co
 
 Under the hood, the orchestrator uses a **generative planning** approach: it decides which steps to take, in what order, to fulfill a user request. If an action fails (for example, an email can’t be sent), the agent follows your exception-handling guidelines (ask a clarifying question or report the error). Because the LLM adapts to conversation context, the agent can maintain memory over multiple turns and incorporate new information as the conversation unfolds.
 
+<!-- 
 > **Visual Flow Example:**  
 >
 > 1. **User:** "Show me my PTO balance."  
@@ -183,6 +184,9 @@ Under the hood, the orchestrator uses a **generative planning** approach: it dec
 > 1. **Agent (Knowledge):** Queries the HR SharePoint list for the user’s balance.  
 > 1. **Agent (Actions):** Retrieves the value and sends a Teams message:  
 >    > "Your current PTO balance is 12 days."  
+-->
+
+### Visual Flow Example
 
 ```mermaid
 flowchart TD
