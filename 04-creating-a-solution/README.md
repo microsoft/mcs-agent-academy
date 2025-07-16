@@ -2,7 +2,7 @@
 
 ### 🕵️‍♂️ CODENAME: `OPERATION CTRL-ALT-PACKAGE`
 
-> **⏱️ Operation Time Window:** `~45 minutes` 
+> **⏱️ Operation Time Window:** `~45 minutes`
 
 ## 🎯 Mission Brief:
 
@@ -16,34 +16,39 @@ Let’s pack up.
 
 - [Solution? What's that?](#️-solution-whats-that)
 - [Why should I use a Solution for my agent?](#-why-should-i-use-a-solution-for-my-agent)
-- [Understanding Solution Publishers](#understanding-solution-publishers)
+- [Understanding Solution Publishers](#-understanding-solution-publishers)
+  - [Why is it important?](#-why-is-it-important)
+  - [Example](#-example)
 - [Power Platform Solution lifecycle](#-power-platform-solution-lifecycle)
+  - [Example](#-example-1)
 - [Lab 04: Create a new Solution](#-lab-04-create-a-new-solution)
-    - [Prerequisites](#prerequisite)
-    - [4.1 Create a Solution publisher](#41-create-a-solution-publisher)
-    - [4.2 Create a new Solution](#42-create-a-new-solution)
-- [Additional learning](#-additional-learning)
+  - [Prerequisites](#prerequisites)
+  - [4.1 Create a Solution publisher](#41-create-a-solution-publisher)
+  - [4.2 Create a new Solution](#42-create-a-new-solution)
+- [Mission Complete](#-mission-complete)
+- [Tactical Resources](#-tactical-resources)
 
 ## 🕵🏻‍♀️ Solution? What's that?
-In Microsoft Power Platform, solutions are like containers or packages that hold all the parts of your apps or agents - these could be tables, forms, flows, and custom logic. Solutions are essential for Application Lifecycle Management (ALM), they enable you to manage your app and agents from idea to development, testing, deployment, and updates. 
+
+In Microsoft Power Platform, solutions are like containers or packages that hold all the parts of your apps or agents - these could be tables, forms, flows, and custom logic. Solutions are essential for Application Lifecycle Management (ALM), they enable you to manage your app and agents from idea to development, testing, deployment, and updates.
 
 In Copilot Studio, every agent you create is stored in a Power Platform solution. By default, agents are created in the Default solution, unless you create a new custom solution to create your agent in. This is what we'll learn 🤓 in this lesson and in the hands-on lab.
 
-Solutions tradtionally have been created in the **Power Apps maker portal** - a web based interface where you can build and customize apps, Dataverse, flows, explore AI components and more.
+Solutions traditionally have been created in the **Power Apps maker portal** - a web based interface where you can build and customize apps, Dataverse, flows, explore AI components and more.
 
-   ![Solutions](assets/4.0_01_Solutions.png)    
+   ![Solutions](assets/4.0_01_Solutions.png)
 
-In Copilot Studio, there is now the **Solution Explorer** where you can manage your solutions directly. You no longer need to switch to the Power Apps maker portal to manage your solutions, it can be done right inside Copilot Studio 🪄 
+In Copilot Studio, there is now the **Solution Explorer** where you can manage your solutions directly. You no longer need to switch to the Power Apps maker portal to manage your solutions, it can be done right inside Copilot Studio 🪄
 
 This means you can do the usual solution-related tasks:
 
 - **Create a solution** - custom solutions enable agents to be exported and imported between environments.
 - **Set your preferred solution** - choose the solution agents, apps, etc will be created in by default.
-- **Add or remove components** - your agent could be referencing other components such as environment variables or cloud flows. Therefore these components needed to be included in the solution. 
+- **Add or remove components** - your agent could be referencing other components such as environment variables or cloud flows. Therefore these components needed to be included in the solution.
 - **Export solutions** - to move solutions to another target environment.
-- **Import solutions** - import solutions created elsewhere, including upgrading or updating solutions. 
+- **Import solutions** - import solutions created elsewhere, including upgrading or updating solutions.
 - **Create and manage solution pipelines** - automate the deployment of solutions between environments.
-- **Git integration** - enables developers to connect solutions with Git respositores for version control, collaboration and ALM. Intended to be used in developer environments only.
+- **Git integration** - enables developers to connect solutions with Git repositories for version control, collaboration and ALM. Intended to be used in developer environments only.
 
    ![Solutions](assets/4.0_02_CopilotStudioSolutionExplorer.png)
 
@@ -52,33 +57,38 @@ There are two types of solutions:
 - **Unmanaged solutions** - used during development. You can freely edit and customize as needed.
 - **Managed solutions** - used when you're ready to deploy your app to testing or production. These are locked down to prevent accidental changes.
 
-
 ## 🤔 Why _should_ I use a Solution for my agent?
+
 Think of Solutions as a _toolbox_. When you need to fix or build something (an agent) in a different location (environment), you gather all the necessary tools (components) and put them in your toolbox (Solution). You can then carry this toolbox to the new location (environment) and use the tools (components) to complete your work, or add new tools (components) to customize your agent or project you're building.
 
-💬 Elaiza, your friendly cloud advocate popping in here 🙋🏻‍♀️ to share some words: 
+💬 Elaiza, your friendly cloud advocate popping in here 🙋🏻‍♀️ to share some words:
 
 > We have a saying in New Zealand, "Be a tidy Kiwi!" which is a call to action for New Zealanders 🥝 to take responsibility for their environment by disposing of litter properly and keeping public spaces clean. We can use the same context for agents by keeping everything related to your agent organized and portable, and it'll help you maintain a tidy environment.
 
 It's good practice to create an agent in a dedicated solution in your source (developer) environment. Here's why solutions are valuable:
 
 🧩 **Organized development**
+
 - You're keeping your agent separate from the Default solution which contains everything in the environment. All your agent components are in one place 🎯
 
 - Everything you need for your agent is in a solution, making it easier to export and import to a target environment 👉🏻 this is a healthy habit of ALM.
 
 🧩 **Safe deployment**
+
 - You can export your app or agent as a managed solution and deploy it to other target environments (such as testing or production) without risking accidental edits.
 
 🧩 **Version control**
+
 - You can create patches (target fixes), updates (a more comprehensive change) or upgrades (replacing a solution - usually major changes and introducing new features).
 
 - Helps you roll out changes in a controlled way.
 
 🧩 **Dependency management**
+
 - Solutions track which parts depend on others. This prevents you from breaking things when you make changes.
 
 🧩 **Team collaboration**
+
 - Developers and makers can work together using unmanaged solutions in development, then hand off a managed solution for deployment.
 
 ## 🪪 Understanding Solution Publishers
@@ -91,7 +101,8 @@ When you create a solution, you must choose a publisher. This publisher defines:
 
 - A name and contact info for the organization or person who owns the solution.
 
-### 🤔 Why is it important? 
+### 🤔 Why is it important?
+
 1. **Easy identification** - the prefix (xample - `new_` or `abc_`) helps you quickly identify which components belong to which solution or team.
 
 2. **Avoids conflicts** - if two teams create a column called status, their prefixes (`teamA_status`, `teamB_status`) prevent naming collisions.
@@ -99,6 +110,7 @@ When you create a solution, you must choose a publisher. This publisher defines:
 3. **Supports ALM** - when moving solutions between environments (Dev → Test → Prod), the publisher helps track ownership and maintain consistency.
 
 ### ✨ Example
+
 Let’s say you create a publisher called Contoso Solutions with the prefix `cts_`.
 
 If you add a custom column called _Priority_, it will be stored as `cts_Priority` in the solution.
@@ -129,11 +141,12 @@ Imagine you're building an IT helpdesk agent to help employees with issues such 
 
 - Once it's ready, you export it as a managed solution and import it into a target environment such as a System Test or User Acceptance Testing (UAT) environment.
 
-- After testing, you move it to the Production envrionment - all without touching the original development version.
+- After testing, you move it to the Production envirionment - all without touching the original development version.
 
 ## 🧪 Lab 04: Create a new Solution
 
 We're now going to learn
+
 - [How to create a Solution publisher](#41-create-a-solution-publisher)
 - [How to create a Solution](#42-create-a-new-solution)
 
@@ -142,28 +155,29 @@ We're going to stick with the example from earlier, where we're going to create 
 Let's begin!
 
 ### Prerequisites
+
 In Copilot Studio, what you _can do_ in the solution explorer depends on your user security role.
 If you don’t have permission to manage solutions in the Power Apps admin center, you won’t be able to do those tasks in Copilot Studio either.
 
-To make sure everything works smoothly, check that you have the right security roles and permissions. Or if you don't manage environments in your organisation, ask your IT adminstrator (or the equivalent) team who manages your tenant/environments.
+To make sure everything works smoothly, check that you have the right security roles and permissions. Or if you don't manage environments in your organisation, ask your IT administrator (or the equivalent) team who manages your tenant/environments.
 
 The following are the security roles that enables users to create a solution in their environment.
 
 | Security role    | Description |
 | ---------- | ---------- |
 | Environment Maker | Provides the necessary permissions to create, customize, and manage resources within a specific environment, including solutions  |
-| System Customizer  | Wider permissions than Environment Maker, including the ability to customize the environment and manage security roles
+| System Customizer  | Wider permissions than Environment Maker, including the ability to customize the environment and manage security roles |
 | System Administrator   | Highest level of permissions and can manage all aspects of the environment, including creating and assigning security roles     |
 
 ### 4.1 Create a Solution publisher
 
-1. Using the same Copilot Studio environment used in the previous lesosn, select the **elipsis icon (. . .)** on the left handside menu in Copilot Studio. Select **Solutions** under the **Explore** header.
+1. Using the same Copilot Studio environment used in the previous lesson, select the **ellipsis icon (. . .)** on the left handside menu in Copilot Studio. Select **Solutions** under the **Explore** header.
 
-   ![Solutions](assets/4.1_01_Solutions.png)    
+   ![Solutions](assets/4.1_01_Solutions.png)
 
 1. The **Solution Explorer** in Copilot Studio will load. Select **+ New solution**
 
-   ![Solutions](assets/4.1_02_NewSolution.png)    
+   ![Solutions](assets/4.1_02_NewSolution.png)
 
 1. The **New solution** pane will appear where we can define the details of our solution. First, we need to create a new publisher. Select **+ New publisher**.
 
@@ -211,11 +225,11 @@ The following are the security roles that enables users to create a solution in 
 
    ![Solutions](assets/4.1_05_Contact.png)
 
-1.  Select the **Properties** tab and select **Save** to create the Publisher.
+1. Select the **Properties** tab and select **Save** to create the Publisher.
 
     ![Solutions](assets/4.1_06_SavePublisher.png)
 
-1. The New publisher pane will close and you'll be brought back to the **New solution** pane with the newly created Publisher selected. 
+1. The New publisher pane will close and you'll be brought back to the **New solution** pane with the newly created Publisher selected.
 
    ![Solutions](assets/4.1_07_PublisherSelected.png)  
 
@@ -223,7 +237,7 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
 ### 4.2 Create a new Solution
 
-1. Now that we've created our solutions, we can now complete the rest of the form in the **New solution** pane. 
+1. Now that we've created our solutions, we can now complete the rest of the form in the **New solution** pane.
 
     Copy and paste the following as the **Display name**,
 
@@ -235,7 +249,7 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
    ```
    ContosoHelpdeskAgent
-   ```    
+   ```
 
    Since we're creating a new solution, the [**Version** number](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/update-solutions#understanding-version-numbers-for-updates/?WT.mc_id=power-172615-ebenitez) by default will be `1.0.0.0`.
 
@@ -247,16 +261,16 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
    ![Solutions](assets/4.2_02_MoreOptions.png)
 
-1.  You'll see the following,
+1. You'll see the following,
 
     - **Installed on** - the date of when the Solution was installed.
 
-    - **Configuration page** - developers set up an HTML web resource to help users interact with their app, agent or tool where it'll appear as a web page in the Informaction section with instructions or buttons. It’s mostly used by companies or developers who build and share solutions with others.
+    - **Configuration page** - developers set up an HTML web resource to help users interact with their app, agent or tool where it'll appear as a web page in the Information section with instructions or buttons. It’s mostly used by companies or developers who build and share solutions with others.
 
-    - **Description** - describes the solution or a high level description of the the configuration page.
+    - **Description** - describes the solution or a high level description of the configuration page.
 
     We'll leave these blank for this lab.
-    
+
     Select **Create**.
 
     ![Solutions](assets/4.2_03_Create.png)
@@ -267,7 +281,7 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
    ![Solutions](assets/4.2_04_SolutionCreated.png)
 
-1. Notice how the Contoso Helpdesk Agent now displays as as the **Current preferred solution** since we ticked the **Set as your preferred solution** checkbox earlier.
+1. Notice how the Contoso Helpdesk Agent now displays as the **Current preferred solution** since we ticked the **Set as your preferred solution** checkbox earlier.
 
    ![Solutions](assets/4.2_05_CurrentPreferredSolutionSelected.png)
 
@@ -275,25 +289,26 @@ High five, you've now created a Solution Publisher! 🙌🏻 We'll next learn ho
 
 Congratulations! 👏🏻 You've created a Publisher and used it in your newly created Solution to build your agent in!
 
+Well done, Agent Maker. A tidy digital footprint is the first step toward operability at scale. Now you have the tools and the mindset for sustainable, enterprise-ready agent development.
+
 This is the end of **Lab 04 - Creating a Solution**, select the link below to move to the next lesson. Your solution created in this lab will be used in the next lesson's lab.
 
 ⏭️ [Move to **Get started quickly with pre-built agents** lesson](/05-using-prebuilt-agents/README.md)
 
-Well done, Agent Maker. A tidy digital footprint is the first step toward operability at scale. Now you’ve got the tools—and the mindset—for sustainable, enterprise-ready agent development.
+## 📚 Tactical Resources
 
-## 📚 Additional learning
-🔗 [Create a solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez)
+🔗 [Create a solution](https://learn.microsoft.com/power-apps/maker/data-platform/create-solution/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Create and manage solutions in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez)
+🔗 [Create and manage solutions in Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/authoring-solutions-overview/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Share agents with other users](https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez)
+🔗 [Share agents with other users](https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Summary of resources available to predefined security roles](https://learn.microsoft.com/en-us/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez)
+🔗 [Summary of resources available to predefined security roles](https://learn.microsoft.com/power-platform/admin/database-security#summary-of-resources-available-to-predefined-security-roles/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Upgrade or update a solution](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez)
+🔗 [Upgrade or update a solution](https://learn.microsoft.com/power-apps/maker/data-platform/update-solutions/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Overview of pipelines in Power Platform](https://learn.microsoft.com/en-us/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez)
+🔗 [Overview of pipelines in Power Platform](https://learn.microsoft.com/power-platform/alm/pipelines/?WT.mc_id=power-172615-ebenitez)
 
-🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/en-us/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
+🔗 [Overview of Git integration in Power Platform](https://learn.microsoft.com/power-platform/alm/git-integration/overview/?WT.mc_id=power-172615-ebenitez)
 
 ![mcs-agent-academy-recruit-04](https://m365-visitor-stats.azurewebsites.net/?resource=https://github.com/microsoft/mcs-agent-academy-recruit/tree/main/04-creating-a-solution)

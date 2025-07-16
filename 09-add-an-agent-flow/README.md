@@ -1,43 +1,56 @@
 # 🚨 Mission 09: Add an agent flow to your Topic for automation
 
+### 🕵️‍♂️ CODENAME: `OPERATION AUTOMATION POWERHOUSE`
+
+> **⏱️ Operation Time Window:** `~30 minutes`  
+
+## 🎯 Mission Brief:
+
+Your agent can now converse with users and provide information, but true operational excellence requires your agent to take action. This mission will transform your conversational agent into an automation powerhouse by equipping it with agent flows.
+
+By mission's end, you'll have created an end-to-end device request automation that captures user input through an adaptive card, retrieves data from SharePoint, sends notifications to managers via email, and provides seamless user feedback - all orchestrated by your agent through intelligent workflow automation.
+
 ## 🔎 Objectives
 
 - [What is an agent flow](#-what-is-an-agent-flow)
 - [Yes, but how is it different to Power Automate cloud flows?](#-yes-but-how-is-it-different-to-power-automate-cloud-flows)
-    - [Agent flows in Copilot Studio](#-agent-flows-in-copilot-studio)
-    - [Power Automate cloud flows](#️-power-automate-cloud-flows)
-    - [Summary](#-summary)
+  - [Agent flows in Copilot Studio](#-agent-flows-in-copilot-studio)
+  - [Power Automate cloud flows](#️-power-automate-cloud-flows)
+  - [Summary](#-summary)
 - [Why use agent flows](#-why-use-agent-flows)
 - [How do agent flows enhance your agent?](#️-how-do-agent-flows-enhance-your-agent)
-    - [Think of it this way](#think-of-it-this-way)
-    - [Why it matters](#why-it-matters)
+  - [Think of it this way](#think-of-it-this-way)
+  - [Why it matters](#why-it-matters)
 - [Key features that make agent flows powerful](#-key-features-that-make-agent-flows-powerful)
 - [How they work](#️-how-they-work)
 - [How to create an agent flow](#-how-to-create-an-agent-flow)
 - [What is the agent flow designer?](#-what-is-the-agent-flow-designer)
-    - [Key features of the agent flow designer](#key-features-of-the-agent-flow-designer)
-    - [Why use the agent flow designer?](#why-use-the-agent-flow-designer)
+  - [Key features of the agent flow designer](#key-features-of-the-agent-flow-designer)
+  - [Why use the agent flow designer?](#why-use-the-agent-flow-designer)
 - [You mentioned _expressions_ - what are expressions?](#-you-mentioned-expressions---what-are-expressions)
-    - [Why use expressions?](#why-use-expressions)
-    - [What do expressions look like?](#what-do-expressions-look-like)
-    - [Why do functions matter?](#why-do-functions-matter)
-    - [Most useful functions](#most-useful-functions)
-    - [Best practices](#-best-practices)
+  - [Why use expressions?](#why-use-expressions)
+  - [What do expressions look like?](#what-do-expressions-look-like)
+  - [Why do functions matter?](#why-do-functions-matter)
+  - [Most useful functions](#most-useful-functions)
+  - [Best practices](#-best-practices)
 - [Lab 09 - Add an agent flow for automation and enhance topic capabilities](#-lab-09---add-an-agent-flow-for-automation-and-enhance-topic-capabilities)
-    - [9.1 Create an agent flow](#91-create-an-agent-flow)
-    - [9.2 Add agent flow to topic](#92-add-agent-flow-to-topic)
-    - [9.3 Update Request device topic with several nodes for a better user experience](#93-update-request-device-topic-with-several-nodes-for-a-better-user-experience)
-    - [9.4 Test agent using several scenarios](#94-test-agent-using-several-scenarios)
+  - [9.1 Create an agent flow](#91-create-an-agent-flow)
+  - [9.2 Add agent flow to topic](#92-add-agent-flow-to-topic)
+  - [9.3 Update Request device topic with several nodes for a better user experience](#93-update-request-device-topic-with-several-nodes-for-a-better-user-experience)
+  - [9.4 Test agent using several scenarios](#94-test-agent-using-several-scenarios)
+- [Mission Complete](#-misson-complete)
+- [Tactical Resources](#-tactical-resources)
 
 ## 🤔 What is an agent flow?
 
-Agent flows are a powerful way to automate repetitive tasks and integrate your apps and services. Think of them as structured, step-by-step workflows that your agent can execute to automate tasks or connect with other applications and services. You can think of them as mini workflows that help your agent do things like send notificaitons, update records, or respond to events.
+Agent flows are a powerful way to automate repetitive tasks and integrate your apps and services. Think of them as structured, step-by-step workflows that your agent can execute to automate tasks or connect with other applications and services. You can think of them as mini workflows that help your agent do things like send notifications, update records, or respond to events.
 
 Unlike autonomous agents that use AI to make decisions on the fly, agent flows are **deterministic workflows** - meaning they follow the same path every time, ensuring consistent and reliable results.
 
 In simple terms:
+
 - They help your agent _do things_, not just _say things_ to users.
-- They're resuable across topics and agents, and can be triggered by user messages, events, or other applications and serices.
+- They're reusable across topics and agents, and can be triggered by user messages, events, or other applications and services.
 
 ## 🙋🏽 Yes, but how is it different to Power Automate cloud flows?
 
@@ -46,30 +59,36 @@ Both agent flows and Power Automate cloud flows help automate tasks. They're des
 ### 🤖 Agent flows in Copilot Studio
 
 **What they're for:**
+
 - Built specifically for conversational agents in Copilot Studio.
 - Focused on smart, AI-driven automation that interacts with business systems.
 
 **Why they're useful:**
+
 - Easy to build and manage directly in Copilot Studio.
 - Great for automating tasks that happen _during the conversation_ with users such as submitting a leave request.
 - You don't need a separate Power Automate license as billing is based on usage inside Copilot Studio. This can save time and cost for enterprise teams.
 
 **Limitations:**
+
 - You can't share them, copy them, or assign co-owners.
-- They're only visible and usuable within Copilot Studio.
+- They're only visible and usable within Copilot Studio.
 
 ### ☁️ Power Automate cloud flows
 
 **What they're for:**
-- Design for general-purpose automation across many apps and services.
+
+- Designed for general-purpose automation across many apps and services.
 - Can run independently or work alongside agent flows.
 
 **Why they're useful:**
+
 - Offers a wide range of connectors.
 - Ideal for automating processes outside of agents.
 - Can be shared, reused, and managed across teams.
 
 **Requirements:**
+
 - You need a Power Automate license to use them.
 
 ### 📗 Summary
@@ -90,6 +109,7 @@ This makes them:
 - **Rule based** - they follow steps that you define.
 
 Other benefits are:
+
 - **Automation** - enables your agent to handle repetitive tasks such as submitting forms or sending notifications.
 - **Connected** - connect with 1400+ connectors like ServiceNow, SharePoint, Salesforce. Otherwise you can build your own custom connector.
 - **Tightly integrated** - agent flows are part of the agent's logic, they're triggered directly by user messages or actions in the conversation.
@@ -101,7 +121,7 @@ Other benefits are:
 
 Agent flows expand what your agent can do beyond "chatting" with users. They allow it to take action and interact with systems.
 
-Let's say you're working in a finance deparment and you receive a lot of invoices from vendors. Normally, somone has to reach each invoice, pull out the important details - the amount, date, who it's from, and check if everything matches your records. Then send it to the right person for approval. This takes time and effort.
+Let's say you're working in a finance department and you receive a lot of invoices from vendors. Normally, someone has to read each invoice, pull out the important details - the amount, date, who it's from, and check if everything matches your records. Then send it to the right person for approval. This takes time and effort.
 
 With agent flows in Copilot Studio, you can automate this process. As soon as the invoice comes in, the agent:
 
@@ -146,7 +166,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
 
 1. **Human in the loop**
     - Add approval steps where a person needs to review or confirm something.
-    - [Advanced approvals](https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez) supports reminders, delegation, and multi-stage approvals.
+    - [Advanced approvals](https://learn.microsoft.com/microsoft-copilot-studio/flows-advanced-approvals?WT.mc_id=power-172621-ebenitez) supports reminders, delegation, and multi-stage approvals.
 
 ## ⚙️ How they work
 
@@ -155,7 +175,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
     An event starts the flow - such as a user asking a question, invoking the flow from a topic, a scheduled time, or an event happening in another system.
 
 1. **Actions**
-    
+
     These are steps that the agent follows next - send an email, call an API, update a ticket in ServiceNow.
 
 ## 🧶 How to create an agent flow
@@ -165,7 +185,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
 
 ## 🎨 What is the agent flow designer?
 
-It's a visual tool in Copilot Studio that helps you build, edit, and manage agent flows that provide step-by-step instructions your agent follows to complete tasks. It's designed to be straight forward to use, even if you're new to agent flows.
+It's a visual tool in Copilot Studio that helps you build, edit, and manage agent flows that provide step-by-step instructions your agent follows to complete tasks. It's designed to be straightforward to use, even if you're new to agent flows.
 
 ### Key features of the agent flow designer
 
@@ -207,6 +227,7 @@ Expressions are small formulas or commands that help your agent flow work with d
 ### Why use expressions?
 
 Expressions let you:
+
 - **Customize how data is handled** - combine names, format dates.
 - **Make decisions** - if a value is greater than 10, do something.
 - **Transform data** - change text to lowercase, extract part of a string.
@@ -214,13 +235,13 @@ Expressions let you:
 
 ### What do expressions look like?
 
-Expressions use functions. I'm going to borrow an explaination of what functions are from former Microsoft MVP, Jerry Weinstock.
+Expressions use functions. I'm going to borrow an explanation of what functions are from former Microsoft MVP, Jerry Weinstock.
 
 > "Functions are built-in logic to transform your data either through simple or complex operations in your expression."
 
-Functions enable you to build expressions without you needing to write any code. 
+Functions enable you to build expressions without you needing to write any code.
 
-The way I like to describe it, is that a function in agent flows is similar to Excel functions. You can perform an operation on data to transform it into a desired output. When building your formula in Excel you select your input value from the cells in a table or a range, and then apply functions to manipulate the data output. An example is using the <samp>COUNT</samp> function to work out the number of cells that contian number from a range. 
+The way I like to describe it, is that a function in agent flows is similar to Excel functions. You can perform an operation on data to transform it into a desired output. When building your formula in Excel you select your input value from the cells in a table or a range, and then apply functions to manipulate the data output. An example is using the `COUNT` function to work out the number of cells that contain numbers from a range.
 
 In agent flows, instead of referencing data from cells in a table, you're referencing data outputs from the trigger or actions when building your expressions. Continuing with the previous example, use the function _length_ to retrieve the number of items returned from the _Get items_ SharePoint connector action.
 
@@ -234,52 +255,55 @@ Using functions makes your agent flows:
 
 ### Most useful functions
 
-The following are common functions used in agent flows. For the full list of functions, head to the [reference guide](https://learn.microsoft.com/en-us/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez).
+The following are common functions used in agent flows. For the full list of functions, head to the [reference guide](https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez).
 
 #### 🔡 Text
-- <samp>concat()</samp> - Joins two or more pieces of text together.
-    - Example: `concat('Hello ', firstName)` → “Hello John”
 
-- <samp>toLower()</samp> / <samp>toUpper()</samp> - Changes text to lowercase or uppercase.
-    - Useful for standardizing input.
+- `concat()` - Joins two or more pieces of text together.
+  - Example: `concat('Hello ', firstName)` → “Hello John”
 
-- <samp>substring()</samp> - Extracts part of a string.
-    - Example: Get the first 3 letters of a name.
+- `toLower()` / `toUpper()` - Changes text to lowercase or uppercase.
+  - Useful for standardizing input.
 
-- <samp>trim()</samp> - Removes spaces from the beginning and end of text.
+- `substring()` - Extracts part of a string.
+  - Example: Get the first 3 letters of a name.
+
+- `trim()` - Removes spaces from the beginning and end of text.
 
 #### 🔢 Math and number
 
-- <samp>add()</samp>, <samp>sub()</samp>, <samp>mul()</samp>, <samp>div()</samp> - Basic math operations.
-    - Example: `add(5, 3)` - the output is 8
+- `add()`, `sub()`, `mul()`, `div()` - Basic math operations.
+  - Example: `add(5, 3)` - the output is 8
 
 #### 📅 Date and time
-- <samp>utcNow()</samp> - Gets the current date and time in UTC.
-    - Great for timestamps.
 
-- <samp>addDays()</samp>, <samp>addHours()</samp> - Adds time to a date.
-    - Example: `addDays(utcNow(), 7)` output is 7 days from now.
+- `utcNow()` - Gets the current date and time in UTC.
+  - Great for timestamps.
 
-- <samp>formatDateTime()</samp> - Formats a date into a readable string.
-    - Example: Monday, July 7, 2025
+- `addDays()`, `addHours()` - Adds time to a date.
+  - Example: `addDays(utcNow(), 7)` output is 7 days from now.
+
+- `formatDateTime()` - Formats a date into a readable string.
+  - Example: Monday, July 7, 2025
 
 #### ✅ Logical
-- <samp>if()</samp> - Runs one value if true, another if false.
-    - Example: `if(score > 50, 'Pass', 'Fail')`
 
-- <samp>equals()</samp> - Checks if two values are the same.
+- `if()` - Runs one value if true, another if false.
+  - Example: `if(score > 50, 'Pass', 'Fail')`
 
-- <samp>and()</samp>, <samp>or()</samp>, <samp>not()</samp> - Combine multiple conditions.
+- `equals()` - Checks if two values are the same.
+
+- `and()`, `or()`, `not()` - Combine multiple conditions.
 
 #### 🪣 Other handy functions
-- <samp>coalesce()</samp> - Returns the first non-empty value.
-    - Useful for fallback/default values.
 
-- <samp>guid()</samp> - Generates a unique ID.
-    - Useful for tracking or logging.
+- `coalesce()` - Returns the first non-empty value.
+  - Useful for fallback/default values.
 
-- <samp>length()</samp> - Counts how many characters or items are in a string or array.
+- `guid()` - Generates a unique ID.
+  - Useful for tracking or logging.
 
+- `length()` - Counts how many characters or items are in a string or array.
 
 ## ⭐ Best practices
 
@@ -308,12 +332,12 @@ Here are some best practices for building agent flows in Copilot Studio.
 1. **Use Version History**
 
     - Save your flow often so you can go back to earlier versions if needed.
-    - You can view and restore previous versions using the _Version History_ pannel.
+    - You can view and restore previous versions using the _Version History_ panel.
 
 1. **Use parameters and expressions wisely**
 
     - When configuring actions, use parameters to make your flow dynamic.
-    - You can enter values manually or use expressions to calcuate them, or combine it with values from actions upstream by using the _dynamic content_ picker.
+    - You can enter values manually or use expressions to calculate them, or combine it with values from actions upstream by using the _dynamic content_ picker.
 
 1. **Delete unused actions**
 
@@ -321,7 +345,7 @@ Here are some best practices for building agent flows in Copilot Studio.
 
 ## 🧪 Lab 09 - Add an agent flow for automation and enhance topic capabilities
 
-We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes. 
+We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.
 
 - [9.1 Create an agent flow](#91-create-an-agent-flow)
 - [9.2 Add agent flow to topic](#92-add-agent-flow-to-topic)
@@ -342,8 +366,8 @@ Let's begin!
 
 1. **SharePoint list**
 
-    We'll be using the **Devices** SharePoint list from [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site). 
-    
+    We'll be using the **Devices** SharePoint list from [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site).
+
     If you have not set up the **Devices** SharePoint list, please head back to [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site).
 
 1. **Contoso Helpdesk Copilot**
@@ -362,7 +386,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     - **Trigger** - When an agent calls the flow
         - This will trigger a flow from a Copilot Studio agent.
-    
+
     - **Action** - Respond to the agent
         - This send a response that can contain output values back to the Copilot Studio agent.
 
@@ -439,7 +463,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     ```
     Get item
     ```
-    
+
     A list of actions will display in the search results. Select the **Get item** action from the **SharePoint connector**.
 
     ![Get item action](assets/9.1_14_GetItemAction.png)
@@ -449,7 +473,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     ```
     Get Device
     ```
-    
+
     ![Rename action](assets/9.1_15_RenameAction.png)
 
 1. In the **Site Address** field, select the **Site address** of the Contoso IT SharePoint site created in [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site).
@@ -470,7 +494,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     sharepoint
     ```
 
-    The search results will input parameters that match the value searched. Select the **DeviceSharePointId** parameter from the trigger.
+    The search results will show input parameters that match the value searched. Select the **DeviceSharePointId** parameter from the trigger.
 
     ![Select DeviceSharePointId input](assets/9.1_19_DeviceSharePointId.png)
 
@@ -491,7 +515,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     ```
     send
     ```
-    
+
     A list of actions will display in the search results. Select the **Send an email (V2)** action from the **Office 365 Outlook connector**.
 
     ![Send an email action](assets/9.1_23_SendAnEmailAction.png)
@@ -516,7 +540,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add an input](assets/9.1_27_RenameAction.png)
 
-1. Let's now define our action. 
+1. Let's now define our action.
 
     For the **To** input parameter, select yourself. Normally this would be your manager or we'd use another action that pulls through your manager based on your Entra ID profile but for the purpose of this lesson, select yourself.
 
@@ -561,10 +585,10 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![User input added](assets/9.1_32_UserInputAdded.png)
 
-1. Click into the space beside `Manufacturer:`. Select the **lightning bolt icon** or **fx icon** to the right. 
+1. Click into the space beside `Manufacturer:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field, 
-    
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+
     ```
     manufacturer
     ```
@@ -573,10 +597,10 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add Manufacturer value input as dynamic content](assets/9.1_33_AddManufacturerValueInput.png)
 
-1.  Click into the space beside `Model:`. Select the **lightning bolt icon** or **fx icon** to the right. 
+1. Click into the space beside `Model:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field, 
-    
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+
     ```
     model
     ```
@@ -599,8 +623,8 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Click after the HTML tag `<a href="` and select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field, 
-    
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+
     ```
     link to item
     ```
@@ -631,8 +655,8 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Click after the `Additional comments from` text before the colon character.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field, 
-    
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+
     ```
     user
     ```
@@ -642,18 +666,18 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     ![Add Model input as dynamic content](assets/9.1_41_AddUserInput.png)
 
 1. We're now going to insert an expression that will display the value of Additional Comments if provided by the user in the **Ask an adaptive card** node, otherwise display "None" if the user does not provide any comments.
-    
+
     Click after the colon and select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Function** tab of the flyout pane and in the expression field above, enter the following, 
-    
+    In the **Function** tab of the flyout pane and in the expression field above, enter the following,
+
     ```
     if(empty())
     ```
 
-    This expression uses the `if` function for an if-else statement. 
-    
-    The next function used is `empty` which checks whether a value exists or not in a string parameter. The string paramater to be referenced is the `AdditionalComments` input from the trigger.
+    This expression uses the `if` function for an if-else statement.
+
+    The next function used is `empty` which checks whether a value exists or not in a string parameter. The string parameter to be referenced is the `AdditionalComments` input from the trigger.
 
     ![If empty](assets/9.1_42_IfExpression.png)
 
@@ -723,8 +747,8 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Insert expression](assets/9.1_53_InsertExpression.png)
 
-1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field, 
-    
+1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+
     ```
     model
     ```
@@ -761,7 +785,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Save details](assets/9.1_59_Save.png)
 
-1. Select the **Designer** tabe and select **Publish** to publish the agent flow so that it can be added as a node in the **Request devce** topic.
+1. Select the **Designer** tabe and select **Publish** to publish the agent flow so that it can be added as a node in the **Request device** topic.
 
     ![Publish](assets/9.1_60_Publish.png)
 
@@ -773,15 +797,15 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 Let's now add the agent flow to the **Request device** topic.
 
-1. Select **Agents** in the left handside menu and select the **Contoso Helpdesk Agent**.
+1. Select **Agents** in the left-hand side menu and select the **Contoso Helpdesk Agent**.
 
     ![Select Agents](assets/9.2_01_01_SelectAgent.png)
 
     Select the **Topics** tab and select the **Request device** topic.
 
-    ![Select Request device topic](assets/9.2_01_02_SelectTopics.png)    
+    ![Select Request device topic](assets/9.2_01_02_SelectTopics.png)
 
-1. Scroll down to the **Ask with adaptive card** node and add a new node. 
+1. Scroll down to the **Ask with adaptive card** node and add a new node.
 
     Select **Add a tool** and in the **Basic tools** tab of the fly out pane, select the **Send device request email** agent flow we recently created and published.
 
@@ -793,7 +817,7 @@ Let's now add the agent flow to the **Request device** topic.
 
     ![Select variable](assets/9.2_03_SelectVariable.png)
 
-1.  Select the **deviceSelctionId** variable which is one of the outputs defined in **Ask with adaptive card** node.
+1. Select the **deviceSelctionId** variable which is one of the outputs defined in **Ask with adaptive card** node.
 
     ![Select deviceSelctionId](assets/9.2_04_SelectDeviceSelectionId.png)
 
@@ -805,27 +829,27 @@ Let's now add the agent flow to the **Request device** topic.
 
     ![Select User.DisplayName system variable](assets/9.2_06_SelectUser.DisplayName.png)
 
-1. Next, select the **greater than icon** for **Advanced inputs** to see the **AdditionalComments** input. 
+1. Next, select the **greater than icon** for **Advanced inputs** to see the **AdditionalComments** input.
 
     ![Expand advanced inputs](assets/9.2_07_ExpandAdvancedInputs.png)
 
-1. Select the **ellipsis (...) icon** for the AdditonalComments input.
+1. Select the **ellipsis (...) icon** for the AdditionalComments input.
 
     ![Expand advanced inputs](assets/9.2_08_SelectVariable.png)
 
-1. Select the **Formula** tab in the flyout variable pane as we'll use a Power Fx expression, similar to the expression in the agent flow that does a conditional check using the _if_ function, but this time 
+1. Select the **Formula** tab in the flyout variable pane as we'll use a Power Fx expression, similar to the expression in the agent flow that does a conditional check using the _if_ function, but this time
     - using Power Fx functions,
     - and inserting either no value, or the value of the `commentsId` output variable from the **Ask with adaptive card** node.
-    
+
     Enter the following functions in the Power Fx field,
-    
+
     ```
     if(empty())
     ```
 
-    This expression uses the `if` function for an if-else statement. 
-    
-    The next function used is `IsBlank` which checks whether a value exists or not in a string parameter. The string paramater to be referenced is the `commentsId` output variable from the **Ask with adaptive card** node.
+    This expression uses the `if` function for an if-else statement.
+
+    The next function used is `IsBlank` which checks whether a value exists or not in a string parameter. The string parameter to be referenced is the `commentsId` output variable from the **Ask with adaptive card** node.
 
     ![If empty](assets/9.2_10_IfIsBlank.png)
 
@@ -843,9 +867,9 @@ Let's now add the agent flow to the **Request device** topic.
 
 1. Next we'll define the logic
 
-    -  when **_true_** - if the `Topic.commentsId` string parameter is empty, then we want to insert no value. 
-    - when **_false_** - if the `Topic.commentsId` string parameter is empty, then insert the value of commentsId variable.
-    
+    - when **_true_** - if the `Topic.commentsId` string parameter is empty, then we want to insert no value.
+    - when **_false_** - if the `Topic.commentsId` string parameter is not empty, then insert the value of commentsId variable.
+
     After the bracket that encloses the string parameter, enter the following,
 
     ```
@@ -853,7 +877,7 @@ Let's now add the agent flow to the **Request device** topic.
     ```
 
     The Power Fx expression should be the following,
-    
+
     ```
     If(IsBlank(Topic.commentsId), "", Topic.commentsId)
     ```
@@ -871,9 +895,9 @@ Let's now add the agent flow to the **Request device** topic.
 ### 9.3 Update Request device topic with several nodes for a better user experience
 
 We'll next add two more nodes:
-    
+
 - **Send a message** - this will act as a confirmation message that references the selected device and that their request has been submitted.
-    
+
 - **Topic management** - to close the conversation, we'll redirect to the **End of conversation** node.
 
 Let's begin!
@@ -951,7 +975,7 @@ Great work!!! We can now test our agent.
     ```
     I need 16GB of RAM please
     ```
-    
+
     ![Select device and enter comment](assets/9.4_03_SelectDeviceAndEnterComment.png)
 
 1. Scroll down until you see the **Submit Request** button and select it to submit the adaptive card to the agent.
@@ -1002,23 +1026,22 @@ Let's test the final scenario which is to not request a device, and the **Goodby
 
     ![Goodbye topic invoked](assets/9.4_13_Goodbye.png)
 
-## ✅ Misson complete
+## ✅ Misson Complete
+
 Congratulations! 👏🏻 You've learnt how to build your agent flow and add it to our existing **Request device** topic, and how to redirect the agent to another topic.
 
 This is the end of **Lab 09 - Add an agent flow for automation and enhance topic capabilities**, select the link below to move to the next lesson. We'll expand on the use case in this lab in the following lesson's lab.
 
 ⏭️ [Move to **Add Event Triggers - Enable autonomous agent capabilities** lesson](/07-add-new-topic-with-trigger/README.md)
 
-
 ## 📚 Tactical Resources
-🔗 [Introducing agent flows: Transforming automation with AI-first workflows](https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/)
 
-🔗 [Agent flows overview](https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez)
+🔗 [Introducing agent flows: Transforming automation with AI-first workflows](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio/introducing-agent-flows-transforming-automation-with-ai-first-workflows/)
 
-🔗 [Use agent flows with your agent](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez)
+🔗 [Agent flows overview](https://learn.microsoft.com/microsoft-copilot-studio/flows-overview?WT.mc_id=power-172621-ebenitez)
 
-🔗 [List of functions in the reference guide](https://learn.microsoft.com/en-us/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez)
+🔗 [Use agent flows with your agent](https://learn.microsoft.com/microsoft-copilot-studio/advanced-flow?WT.mc_id=power-172621-ebenitez)
+
+🔗 [List of functions in the reference guide](https://learn.microsoft.com/azure/logic-apps/workflow-definition-language-functions-reference?WT.mc_id=power-172621-ebenitez)
 
 📺 [Agent Flows in Copilot Studio](https://www.youtube.com/watch?v=VJTKyk3Pr7s)
-
-

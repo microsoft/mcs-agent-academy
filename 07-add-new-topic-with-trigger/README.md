@@ -2,7 +2,7 @@
 
 ### 🕵️‍♂️ CODENAME: `OPERATION STAY ON TOPIC`
 
-> **⏱️ Operation Time Window:** `~60 minutes` 
+> **⏱️ Operation Time Window:** `~60 minutes`
 
 ## 🎯  Mission Brief:
 
@@ -20,64 +20,68 @@ With Topics and Triggers, your agent can:
 
 You’re not just building dialogue—you’re wiring up its decision-making cortex. Welcome to the Neural Nexus.
 
-
 ## 🔎 Objectives
 
 - [What is a Topic?](#-what-is-a-topic)
-    - [Purpose of a topic](#-purpose-of-a-topic)
+  - [Purpose of a topic](#-purpose-of-a-topic)
 - [Why are topics useful?](#-why-are-topics-useful)
 - [Types of topics](#-anatomy-of-a-topic)
-    - [Triger phrases](#️triger-phrases)
-    - [Conversation nodes](#-conversation-nodes)
+- [Anatomy of a topic](#-anatomy-of-a-topic)
+  - [Trigger phrases](#️-trigger-phrases)
+  - [Conversation nodes](#-conversation-nodes)
 - [Using Power Fx in your nodes](#️-using-power-fx-in-your-nodes)
-    - [What Power Fx can do in topics](#what-power-fx-can-do-in-topics)
-    - [Why use Power Fx?](#why-use-power-fx)
+  - [What Power Fx can do in topics](#what-power-fx-can-do-in-topics)
+  - [Why use Power Fx?](#why-use-power-fx)
 - [How do I create and edit topics?](#️-how-do-i-create-and-edit-topics)
-    - [Create from blank](#1-create-from-blank)
-    - [Create with Copilot](#2-create-with-copilot)
+  - [Create from blank](#1-create-from-blank)
+  - [Create with Copilot](#2-create-with-copilot)
 - [OK, how do I design topics for my agent?](#-ok-how-do-i-design-topics-for-my-agent)
 - [Lab 07 - Add a new topic with conversation nodes](#-lab-07---add-a-new-topic-with-conversation-nodes)
-    - [Use case](#-use-case)
-    - [Prerequisites](#prerequisites)
-    - [7.1 Add a new topic from blank](#71-add-a-new-topic-from-blank)
-    - [7.2 Define the trigger inputs and outputs](#72-define-the-trigger-inputs-and-outputs)
-    - [7.3 Add node - Add a tool using the SharePoint connector](#73-add-node---add-a-tool-using-a-connector)
-- [Additional learning](#-additional-learning)
+  - [Use case](#-use-case)
+  - [Prerequisites](#prerequisites)
+  - [7.1 Add a new topic from blank](#71-add-a-new-topic-from-blank)
+  - [7.2 Define the trigger inputs and outputs](#72-define-the-trigger-inputs-and-outputs)
+  - [7.3 Add node - Add a tool using the SharePoint connector](#73-add-node---add-a-tool-using-a-connector)
+- [Tactical Resources](#-tactical-resources)
 
 ## 🤔 What is a Topic?
 
 A topic is a structured conversation that helps your agent respond to specific user questions or tasks. Think of a topic as a mini-conversation or task that your agent can handle. Each topic is designed to respond to a specific user question or request.
 
 ### 🌌 Purpose of a topic
+
 There are three common purposes for topics based on what users need:
 
 **Informational** - answers questions such as the following:
-- <samp>"What is …?"</samp>
-- <samp>"When will …?"</samp>
-- <samp>"Why …?"</samp>
-- <samp>"Can you tell me …?"</samp>
+
+- `What is …?`
+- `When will …?`
+- `Why …?`
+- `Can you tell me …?`
 
 **Task completion** - helps users _do_ something:
-- <samp>"I want to …"</samp>
-- <samp>"How do I …?"</samp>
-- <samp>"I need …?"</samp>
+
+- `"I want to …"`
+- `"How do I …?"`
+- `"I need …?"`
 
 **Troubleshooting** - solves problems:
-- <samp>"Something isn’t working …"</samp>
-- <samp>"I'm encountering an error message …"</samp>
-- <samp>"I’m seeing something unexpected …?"</samp>
 
+- `Something isn’t working …`
+- `I'm encountering an error message …`
+- `I’m seeing something unexpected …?`
 
-You can also create topics for ambiguous questions like "<samp>I need help</samp>," which ask users for more details before continuing.
+You can also create topics for ambiguous questions like `I need help`, which ask users for more details before continuing.
 
 ## 🐦 Why are topics useful?
+
 Topics help you,
 
 - Organize your agent's knowledge.
 
 - Make conversations feel natural.
 
-- Solve user problems effeciently.
+- Solve user problems effectively.
 
 ## 🪺 Types of topics
 
@@ -94,11 +98,11 @@ Topics help you,
 
 ![Types of topics](assets/7.0_01_Topics.png)
 
-##  🧬 Anatomy of a topic
+## 🧬 Anatomy of a topic
 
 Each topic usually contains the following.
 
-### 🗣️Triger phrases
+### 🗣️ Trigger phrases
 
 These are words or sentences users might say to start the topic.
 
@@ -106,15 +110,16 @@ These are words or sentences users might say to start the topic.
 
 For a leave request topic, trigger phrases could be
 
-- <samp>"I want to take vacation leave"</samp>
-- <samp>"Request vacation"</samp>
-- <samp>"Apply for time off"</samp>
-- <samp>"How do I submit a leave request?"</samp>
+- `I want to take vacation leave`
+- `Request vacation`
+- `Apply for time off`
+- `How do I submit a leave request?`
 
 For a request device topic, trigger phrases could be
-- <samp>"I need a new device"</samp>
-- <samp>"Can I request a device?"</samp>
-- <samp>"Can you help me with a device request"</samp>
+
+- `I need a new device`
+- `Can I request a device?`
+- `Can you help me with a device request`
 
 ### 💬 Conversation nodes
 
@@ -135,21 +140,21 @@ The following are the main types of nodes you can add to an agent:
 
 1. **Send a message**
     - **Purpose** - sends a mesage to the user.
-    - **Example** - <samp>"Thanks for your request! I'll help you with that."</samp>
+    - **Example** - `Thanks for your request! I'll help you with that.`
 
-    This node lets your agent send messages to users, which can be simple text or rich content like images, videos, cards, quick replies and adaptive cards. 
-    
+    This node lets your agent send messages to users, which can be simple text or rich content like images, videos, cards, quick replies and adaptive cards.
+
     You can personalize messages using variables, add multiple message variations for variety, and even customize speech output for voice-enabled channels.
 
     > Think of it as a "say something" block that helps your agent communicate clearly and interactively with users.
 
 1. **Ask a question**
     - **Purpose** - asks the user a question and waits for their answer.
-    - **Example** - <samp>"What are your vacation dates?"</samp>
+    - **Example** - `What are your vacation dates?`
 
-    This node is used to ask users for specific information during a conversation and store their responses in variables for later use. 
+    This node is used to ask users for specific information during a conversation and store their responses in variables for later use.
 
-    You can customize the type of question like text input or use entities for a defined list of values a user selects from, and define how the agent should behave if the user gives an invalid answer or skips the question. 
+    You can customize the type of question like text input or use entities for a defined list of values a user selects from, and define how the agent should behave if the user gives an invalid answer or skips the question.
 
     It also supports rich content like images and quick replies, and lets you fine-tune validation, reprompting, and interruption settings to make the conversation flow smoothly.
 
@@ -165,7 +170,7 @@ The following are the main types of nodes you can add to an agent:
 
 1. **Add a condition**
     - **Purpose** - add logic to the conversation. It checks something and decides what to do next.
-    - **Example** - if the user says "<samp>Yes</samp>," go to the next step. If "<samp>No</samp>," end the conversation.
+    - **Example** - if the user says `Yes`, go to the next step. If `No`, end the conversation.
 
     This node creates decision points in your agent's conversation flow by checking if a variable meets certain criteria. Based on whether the condition is true or false, the agent follows different paths.
 
@@ -228,11 +233,11 @@ In Copilot Studio, Power Fx is a low-code programming language used to add logic
 ### What Power Fx can do in topics
 
 - Set and manipulate variables
-    - Example: <samp>Set(userName, "Adele Vance")</samp>
+  - Example: `Set(userName, "Adele Vance")`
 - Create conditions
-    - Example: <samp>If(score > 80, "Pass", "Fail")</samp>
+  - Example: `If(score > 80, "Pass", "Fail")`
 - Format and transform data
-    - Example: <samp>Text(DateValue, "dd/mm/yyyy")</samp>    
+  - Example: `Text(DateValue, "dd/mm/yyyy")`
 
 ### Why use Power Fx?
 
@@ -240,8 +245,7 @@ In Copilot Studio, Power Fx is a low-code programming language used to add logic
 
 - **Familiar:** if you’ve used Excel formulas, it feels very similar.
 
-- **Powerful:** it lets you personalize conversations, validate input, and control how 
-your agent behaves based on user data.
+- **Powerful:** it lets you personalize conversations, validate input, and control how your agent behaves based on user data.
 
 ## 🏗️ How do I create and edit topics?
 
@@ -254,36 +258,38 @@ This allows you to build custom conversation flows from scratch, and you can add
 ![Add a topic](assets/7.0_04_AddATopic.png)
 
 #### Why this is useful
+
 - It gives you full control over how your agent responds.
 - You can customize logic using variables, Power Fx, and conditions.
 - It’s perfect for building tailored experiences for specific business needs.
-
 
 ### 2. Create with Copilot
 
 This allows you to describe what you want using natural language, and Copilot will build the conversation for you. Same applies when editing your topic, use natural language and Copilot will review and modify the topic for you.
 
 #### What Copilot supports
+
 - Can create and edit:
-    - Message nodes
-    - Question nodes
-    - Condition nodes
+  - Message nodes
+  - Question nodes
+  - Condition nodes
 - Doesn’t support advanced settings such as how to reprompt the user if they don’t respond or how to manage interruptions during a question. You can still adjust those settings manually if needed.
 
 #### Why this is useful
+
 - Speeds up development with AI assistance.
 - Lets you focus on logic and user experience instead of repetitive setup.
 - Makes it easier to iterate and improve conversation flows with minimal effort.
 
 #### ✨ Example prompts
 
- - **Create a topic**
-    - <samp>Accept a user's name, age and date of birth and then repeat their responses back to them</samp>
-    - <samp>Collect a user's street address, state and zip code. The user should be able to retry each question up to 4 times</samp>    
+- **Create a topic**
+  - `Accept a user's name, age and date of birth and then repeat their responses back to them`
+  - `Collect a user's street address, state and zip code. The user should be able to retry each question up to 4 times`
 
 - **Edit a topic**
-    - <samp>Add a question asking for the user’s date of birth</samp>
-    - <samp>Summarize collected info in an Adaptive Card.</samp>
+  - `Add a question asking for the user’s date of birth`
+  - `Summarize collected info in an Adaptive Card.`
 
 ## 👩🏻‍🎨 OK, how do I design topics for my agent?
 
@@ -291,7 +297,7 @@ This allows you to describe what you want using natural language, and Copilot wi
 
 Start by identifying common questions or tasks users will ask your agent. These could be:
 
-- Questions that users ask often such as, <samp>what's my entitlement for sick days?</samp>
+- Questions that users ask often such as, `what's my entitlement for sick days?`
 - Common tasks users want to complete such as submitting a form
 - Problems users often face such as login issues
 
@@ -323,31 +329,31 @@ Design for both:
 
 Example:
 
-- User: <samp>"I want to apply for vacation leave."</samp>
+- User: `I want to apply for vacation leave.`
 
-- Agent: <samp>"Sure! What date would you like your leave to start?"</samp>
+- Agent: `Sure! What date would you like your leave to start?`
 
-- User: <samp>"July 15th."</samp>
+- User: `July 15th`
 
-- Agent: <samp>"Got it. And when will your leave end?"</samp>
+- Agent: `Got it. And when will your leave end?`
 
-- User: <samp>"July 22nd."</samp>
+- User: `July 22nd.`
 
-- Agent: <samp>"Thanks! What’s the reason for your leave??"</samp>
+- Agent: `Thanks! What’s the reason for your leave?`
 
-- User: <samp>"Family vacation."</samp>
+- User: `Family vacation.`
 
-- Agent: <samp>"Thanks for the details. I’ve submitted your leave request from July 15th to July 22nd for a family vacation. You’ll get a confirmation soon."
+- Agent: `Thanks for the details. I’ve submitted your leave request from July 15th to July 22nd for a family vacation. You’ll get a confirmation soon.`
 
 ### 🤖 Step 5 - Use AI for unexpected questions
 
-Even if you've designed a topic for leave requests, users might ask questions that aren't directly covered. This is where AI features like the _Conversational boosting_ system topic come in handy. 
+Even if you've designed a topic for leave requests, users might ask questions that aren't directly covered. This is where AI features like the _Conversational boosting_ system topic come in handy.
 
 This topic includes a generative answers node, which lets your agent start using connected knowledge sources right away. Any knowledge sources added at the agent level are automatically included in the generative answers node within the _Conversational boosting_ system topic.
 
 #### Example
 
-- User: <samp>"Can I carry over unused vacation days to next year?"</samp>
+- User: `Can I carry over unused vacation days to next year?`
 
 This question might not be part of your predefined topic flow, especially if your topic only handles submitting leave requests.
 
@@ -357,7 +363,7 @@ If your agent is connected to your company's HR policy documents or internal web
 
 - Search for the relevant leave policy
 - Understand and summarize the rules
-- Agent responds with: <samp>"According to the HR policy, you can carry over unused vacation days to the next calendar year. For more details, check the leave policy section on the HR portal."</samp>
+- Agent responds with: `According to the HR policy, you can carry over unused vacation days to the next calendar year. For more details, check the leave policy section on the HR portal.`
 
 #### Why this is useful
 
@@ -387,15 +393,15 @@ Below is an example of a topic that handles leave requests.
 
 **Step 1: Trigger phrase**
 
-User types, 
-    
-<samp>I want to request vacation leave</samp>
+User types,
+
+`I want to request vacation leave`
 
 **Step 2: Agent asks for details using an Adaptive card**
 
 Agent asks,
 
-<samp>Sure! What dates would you like to take off?</samp>
+`Sure! What dates would you like to take off?`
 
 Adaptive card has a start date and end date calendar picker control.
 
@@ -411,7 +417,7 @@ A Power Automate cloud flow has been executed which creates a new request in lea
 
 Agent responds with,
 
-<samp>Your vacation leave request from August 5 to August 10 has been submitted. Your manager will review and get back to you shortly.</samp>
+`Your vacation leave request from August 5 to August 10 has been submitted. Your manager will review and get back to you shortly.`
 
 ## 🧪 Lab 07 - Add a new topic with conversation nodes
 
@@ -435,8 +441,8 @@ Let's begin!
 
 1. **SharePoint list**
 
-    We'll be using the **Devices** SharePoint list from [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site). 
-    
+    We'll be using the **Devices** SharePoint list from [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site).
+
     If you have not set up the **Devices** SharePoint list, please head back to [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](/00-course-setup/README.md/#step-3-create-new-sharepoint-site).
 
 1. **Contoso Helpdesk Agent**
@@ -463,10 +469,10 @@ Let's begin!
     Available devices
     ```
 
-    ![Name the topic](assets/7.1_03_TopicName.png)    
+    ![Name the topic](assets/7.1_03_TopicName.png)
 
 1. Enter a trigger description that outlines what the topic does. Copy and paste the following.
-    
+
     **Trigger description**
 
     ```
@@ -517,7 +523,7 @@ Let's begin!
     List of possible values: Laptop, Desktop, Smartphone
     ```
 
-    ![Description](assets/7.2_06_InputDescription.png)    
+    ![Description](assets/7.2_06_InputDescription.png)
 
 1. Next, let's define our output for the topic. Select the **Output** tab.
 
@@ -599,10 +605,10 @@ Let's begin!
 
     ![Configure Get items inputs](assets/7.3_10_GetItemsInputs.png)
 
-1. Now, to only display devices from the SharePoint list based on 
-    - the selected value, 
-    - and only devices where the status equals _Available_, 
-    
+1. Now, to only display devices from the SharePoint list based on
+    - the selected value,
+    - and only devices where the status equals _Available_,
+
     we need to apply a filter. This is achieved by entering a filter query with the help of [Power Fx](/07-add-new-topic-with-trigger/README.md/#️-using-power-fx-in-your-nodes). Select the **ellipsis (...) icon**.
 
     ![Select ellipsis icon](assets/7.3_11_SelectVariable.png)
@@ -611,9 +617,9 @@ Let's begin!
 
     ![Select Formula tab](assets/7.3_12_SelectFormula.png)
 
-1. Select the **expand** icond to enlarge the **Formula** field. Copy and paste the following Power Fx expression. 
+1. Select the **expand** icond to enlarge the **Formula** field. Copy and paste the following Power Fx expression.
 
-    We are using the `Concatenate` function to create an expression that will filter 
+    We are using the `Concatenate` function to create an expression that will filter
     - the SharePoint column of **Status** equals _Available_
     - and the SharePoint column of **Asset type** equals _the selected device from the question node_.
 
@@ -657,7 +663,7 @@ Let's begin!
 
     ![Set variable](assets/7.3_20_SelectAVariable.png)
 
-1. Select the Topic output created earlier as the variable, **VarAvailableDevices**. 
+1. Select the Topic output created earlier as the variable, **VarAvailableDevices**.
 
     ![Save topic](assets/7.3_21_SelectVarAvailableDevicesOutput.png)
 
@@ -665,7 +671,7 @@ Let's begin!
 
     ![Select variable value](assets/7.3_22_SelectVariable.png)
 
-1. We'll now use a PowerFx expression to set the variable value as the `value` property retured in the **Get items** response, and make the [scope of the variable](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172621-ebenitez) global by adding the prefix of `Global`.
+1. We'll now use a PowerFx expression to set the variable value as the `value` property retured in the **Get items** response, and make the [scope of the variable](https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez) global by adding the prefix of `Global`.
 
     **Save** the topic.
 
@@ -749,17 +755,17 @@ This is the end of **Lab 07 - Add a new topic with conversation nodes**, select 
 
 ⏭️ [Move to **Enhance user interactions with Adaptive Cards** lesson](/08-add-adaptive-card/README.md)
 
-
 ## 📚 Tactical Resources
-🔗 [Use system topics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-system-topics?mc_id=power-170631-ebenitez)
 
-🔗 [Topics in Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172621-ebenitez)
+🔗 [Use system topics](https://learn.microsoft.com/microsoft-copilot-studio/authoring-system-topics?mc_id=power-172618-ebenitez)
 
-🔗 [Set topic triggers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172621-ebenitez)
+🔗 [Topics in Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/guidance/topics-overview?WT.mc_id=power-172618-ebenitez)
 
-🔗 [Defining agent topics](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172621-ebenitez)
+🔗 [Set topic triggers](https://learn.microsoft.com/microsoft-copilot-studio/authoring-triggers?WT.mc_id=power-172618-ebenitez)
 
-🔗 [Create expressions using Power Fx](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172621-ebenitez)
+🔗 [Defining agent topics](https://learn.microsoft.com/microsoft-copilot-studio/guidance/defining-chatbot-topics?WT.mc_id=power-172618-ebenitez)
+
+🔗 [Create expressions using Power Fx](https://learn.microsoft.com/microsoft-copilot-studio/advanced-power-fx?WT.mc_id=power-172618-ebenitez)
 
 📺 [Author topics using natural language](https://aka.ms/ai-in-action/copilot-studio/ep6)
 
