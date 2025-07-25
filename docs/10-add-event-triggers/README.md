@@ -16,27 +16,11 @@ Success means building agents that initiate value - not just respond to it.
 
 📖 This lesson will cover:
 
-- [What is an Event Trigger?](#-what-is-an-event-trigger)
-  - [Why Event Triggers matter in autonomous agents](#why-event-triggers-matter-in-autonomous-agents)
-- [How do Event Triggers work?](#️-how-do-event-triggers-work)
-  - [The trigger workflow](#the-trigger-workflow)
-  - [Event vs Topic triggers](#event-vs-topic-triggers)
-- [Understanding trigger payloads](#-understanding-trigger-payloads)
-  - [Default vs custom payloads](#default-vs-custom-payloads)
-  - [Agent instructions vs custom payload instructions](#agent-instructions-vs-custom-payload-instructions)
-- [Common Event Trigger scenarios](#-common-event-trigger-scenarios)
-- [Publishing and authentication considerations](#️-publishing-and-authentication-considerations)
-  - [Maker authentication](#maker-authentication)
-  - [Data protection best practices](#data-protection-best-practices)
-- [Troubleshooting and limitations](#️-troubleshooting-and-limitations)
-- [Lab 10 - Add Event Triggers for autonomous agent behavior](#-lab-10---add-event-triggers-for-autonomous-agent-behavior)
-  - [Use case](#-use-case)
-  - [Prerequisites](#prerequisites)
-  - [10.1 Enable Generative AI and create a SharePoint item creation trigger](#101-enable-generative-ai-and-create-a-sharepoint-item-creation-trigger)
-  - [10.2 Edit the Trigger](#102-edit-the-trigger)
-  - [10.3 Create a tool for email acknowledgment](#103-create-a-tool-for-email-acknowledgment)
-  - [10.4 Test the trigger](#104-test-the-trigger)
-- [Tactical Resources](#-tactical-resources)
+- Understanding Event Triggers and how they enable autonomous agent behavior
+- Learning the difference between event triggers and topic triggers, including trigger workflows and payloads
+- Exploring common Event Trigger scenarios
+- Understanding authentication, security, and publishing considerations for event-driven agents
+- Building an autonomous IT Help Desk agent that responds to SharePoint events and sends email acknowledgments
 
 ## 🤔 What is an Event Trigger?
 
@@ -135,27 +119,27 @@ You have two places to guide your agent's behavior with event triggers:
 
 Here are practical examples of how event triggers can enhance your agent:
 
-**IT Help Desk Agent**
+### IT Help Desk Agent
 
 - **Trigger**: New SharePoint list item (support ticket)
 - **Action**: Automatically categorize, assign priority, and notify appropriate team members
 
-**Employee Onboarding Agent**  
+### Employee Onboarding Agent
 
 - **Trigger**: New user added to Dataverse
 - **Action**: Send welcome message, create onboarding tasks, and provision access
 
-**Project Management Agent**
+### Project Management Agent
 
 - **Trigger**: Task completed in Planner
 - **Action**: Update project dashboard, notify stakeholders, and check for blockers
 
-**Document Management Agent**
+### Document Management Agent
 
 - **Trigger**: File uploaded to specific SharePoint folder
 - **Action**: Extract metadata, apply tags, and notify document owners
 
-**Meeting Assistant Agent**
+### Meeting Assistant Agent
 
 - **Trigger**: Calendar event created
 - **Action**: Send pre-meeting reminders and agenda, book resources
@@ -186,18 +170,18 @@ To maintain security when publishing agents with event triggers:
 
 Keep these important considerations in mind when working with event triggers:
 
-**Quota and billing impacts**
+### Quota and billing impacts
 
 - Each trigger activation counts toward your message consumption
 - Frequent triggers (like every-minute recurrence) can quickly consume quota
 - Monitor usage to avoid throttling
 
-**Technical requirements**
+### Technical requirements
 
 - Only available for agents with generative orchestration enabled
 - Requires solution-aware cloud flow sharing to be enabled in your environment
 
-**Data Loss Prevention (DLP)**
+### Data Loss Prevention (DLP)
 
 - Your organization's DLP policies determine which triggers are available
 - Administrators can block event triggers entirely
@@ -328,7 +312,7 @@ Before starting this lab, ensure you have:
 
 ### 10.4 Test the trigger
 
-1. Inside your **Helpdesk Agent**, select the **Overview** tab
+1. Inside your **Help Desk Agent**, select the **Overview** tab
 2. Click **Test Trigger** icon next to the **New Support Ticket Created in SharePoint** trigger. This will load the **Test your trigger** window.
 3. Open a new browser tab and navigate to your **SharePoint IT Support Tickets list**
 4. Click **+ Add new item** to create a test ticket:
